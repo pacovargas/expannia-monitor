@@ -21,6 +21,9 @@ function lanzaMonitor(){
             display("start status: " + json.status);
             display("start event: " + json.event);
             display("start desc: " + json.desc);
+            if(json.status == "OK" && json.event == "IBEACON"){
+                display("BEACON: " + json.data["uuid"]);
+            }
         }
     );
 }
