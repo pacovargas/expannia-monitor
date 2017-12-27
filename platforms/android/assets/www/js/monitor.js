@@ -1,4 +1,5 @@
 var cont = 0;
+var name = "";
 
 function display(str){
     var contenido = $("#display").html();
@@ -37,3 +38,10 @@ function lanzaMonitor(){
 }
 
 document.addEventListener("deviceready", lanzaMonitor, false);
+
+$(function(){
+    $("#set-name").click(function(event) {
+        name = prompt("name");
+        $("#name-field").html(name);
+    });
+});
