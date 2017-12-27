@@ -12,5 +12,7 @@
     <engine name="android" spec="~6.3.0" />
     <plugin name="cordova-plugin-beacon" />
     <plugin name="cordova-plugin-insomnia" />
+    <plugin name="cordova-plugin-whitelist" />
+    <plugin name="cordova-plugin-geolocation" />
     <engine name="browser" spec="~5.0.2" />
 </widget>

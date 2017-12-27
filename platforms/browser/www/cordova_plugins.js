@@ -60,7 +60,9 @@ module.exports.metadata =
     "cordova-plugin-beacon": "1.1.0",
     "cordova-plugin-device": "2.0.0",
     "cordova-plugin-background-mode": "0.7.2",
-    "cordova-plugin-insomnia": "4.3.0"
+    "cordova-plugin-insomnia": "4.3.0",
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-geolocation": "3.0.0"
 }
 // BOTTOM OF METADATA
 });
