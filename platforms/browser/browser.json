@@ -6,6 +6,23 @@
     "config_munge": {
         "files": {}
     },
-    "installed_plugins": {},
-    "dependent_plugins": {}
+    "installed_plugins": {
+        "cordova-plugin-beacon": {
+            "PACKAGE_NAME": "com.phonegap.expanniamonitor"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-beacon/www/client.js",
+            "id": "cordova-plugin-beacon.client",
+            "pluginId": "cordova-plugin-beacon",
+            "clobbers": [
+                "cordova.plugins.simplexpbeacon"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-beacon": "1.1.0"
+    }
 }

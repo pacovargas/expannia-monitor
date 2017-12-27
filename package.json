@@ -1,0 +1,17 @@
+{
+  "name": "com.phonegap.expanniamonitor",
+  "version": "1.0.0",
+  "displayName": "Expannia Monitor",
+  "cordova": {
+    "platforms": [
+      "android",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-beacon": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "~6.3.0"
+  }
+}
