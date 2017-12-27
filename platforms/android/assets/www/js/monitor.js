@@ -8,8 +8,8 @@ function display(str){
 function lanzaMonitor(){
     display("device ready");
 
-    cordova.plugins.backgroundMode.enable();
-    
+    window.plugins.insomnia.keepAwake();
+
     cordova.plugins.simplexpbeacon.initialiseBluetooth(
         function(data) {
             var json = JSON.parse(data);

@@ -12,6 +12,9 @@
         },
         "cordova-plugin-background-mode": {
             "PACKAGE_NAME": "com.phonegap.expanniamonitor"
+        },
+        "cordova-plugin-insomnia": {
+            "PACKAGE_NAME": "com.phonegap.expanniamonitor"
         }
     },
     "dependent_plugins": {
