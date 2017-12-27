@@ -11,7 +11,7 @@ function lanzaMonitor(){
 
     window.plugins.insomnia.keepAwake();
 
-    navigator.geolocation.getCurrentPosition(
+    navigator.geolocation.watchPosition(
         function(position){
             display("lat: " + position.coords.latitude);
             display("lng: " + position.coords.longitude);
