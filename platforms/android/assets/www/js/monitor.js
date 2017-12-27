@@ -1,5 +1,6 @@
-function display($str){
-    $("#display").append($str + "<br />");
+function display(str){
+    var contenido = $("#display").html();
+    $("#display").html(str + "<br />" + contenido);
 }
 
 function lanzaMonitor(){
