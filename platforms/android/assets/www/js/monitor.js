@@ -29,7 +29,8 @@ function lanzaMonitor(){
                     cont = cont + 1;
                 else
                     cont = 0;
-                display(cont + " - BEACON: " + json.data["uuid"]);
+                var distancia = parseInt(json.rssi) / parseInt(json.txpower);
+                display(cont + " - BEACON: " + json.data["uuid"] + "-" + json.major + "-" + json.minor + "(rssi: " + json.rssi + ") (Distiancia: " + distancia);
             }
         }
     );
