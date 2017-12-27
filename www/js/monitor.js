@@ -6,12 +6,21 @@ function lanzaMonitor(){
     console.log(cordova);
     console.log(cordova.plugins);
     display("device ready");
+    
+    cordova.plugins.simplexpbeacon.initialiseBluetooth(
+        function(data) {
+            var json = JSON.parse(data);
+            display("initialise status: " + json.status);
+            display("initialise desc: " + json.desc);
+        }
+    );
+
     cordova.plugins.simplexpbeacon.startMonitoring(
         function(data) {
             var json = JSON.parse(data);
-            display(json.status);
-            display(json.event);
-            display(json.desc);
+            display("start status: " + json.status);
+            display("start event: " + json.event);
+            display("start desc: " + json.desc);
         }
     );
 }
