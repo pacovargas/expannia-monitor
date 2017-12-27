@@ -1,3 +1,5 @@
+var cont = 0;
+
 function display(str){
     var contenido = $("#display").html();
     $("#display").html(str + "<br />" + contenido);
@@ -23,7 +25,11 @@ function lanzaMonitor(){
             display("start event: " + json.event);
             display("start desc: " + json.desc);
             if(json.status == "OK" && json.event == "IBEACON"){
-                display("BEACON: " + json.data["uuid"]);
+                if(cont < 1000)
+                    cont = cont + 1;
+                else
+                    cont = 0;
+                display(cont + " - BEACON: " + json.data["uuid"]);
             }
         }
     );
