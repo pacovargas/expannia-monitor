@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.phonegap.expanniamonitor" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Expannia Monitor</name>
+    <description>
+        Expannia Beacons Monitoring APP
+    </description>
+    <author email="paco@sauz.es" href="http://www.sauz.es">
+        Sauz Web Solutions
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <engine name="android" spec="~6.3.0" />
+    <plugin name="cordova-plugin-beacon" />
+</widget>
