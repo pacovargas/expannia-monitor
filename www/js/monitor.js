@@ -6,6 +6,29 @@ function display(str){
     $("#display").html(str + "<br />" + contenido);
 }
 
+function updatePosition(lat, lng){
+    if(name != ""){
+        $.ajax({
+            url: 'http://geosearch.sauz.es/server/updatereceiverposition/',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+                name: name,
+                lat: lat,
+                lng: lng,
+            },
+        })
+        .done(function(data) {
+            if(data.success){
+                display("Position updated");
+            }
+            else{
+                display("Error updating position");
+            }
+        });
+    }
+}
+
 function lanzaMonitor(){
     display("device ready");
 
@@ -13,8 +36,8 @@ function lanzaMonitor(){
 
     navigator.geolocation.watchPosition(
         function(position){
-            display("lat: " + position.coords.latitude);
-            display("lng: " + position.coords.longitude);
+            display("New position: " + position.coords.latitude + " - " + position.coords.longitude);
+            updatePosition(position.coords.latitude, position.coords.longitude);
         }
     );
 
