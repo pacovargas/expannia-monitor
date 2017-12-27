@@ -10,6 +10,8 @@ function lanzaMonitor(){
         function(data) {
             var json = JSON.parse(data);
             display(json.status);
+            display(json.event);
+            display(json.desc);
         }
     );
 }
