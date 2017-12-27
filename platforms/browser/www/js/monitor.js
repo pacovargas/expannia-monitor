@@ -6,9 +6,9 @@ function display(str){
 }
 
 function lanzaMonitor(){
-    console.log(cordova);
-    console.log(cordova.plugins);
     display("device ready");
+
+    cordova.plugins.backgroundMode.enable();
     
     cordova.plugins.simplexpbeacon.initialiseBluetooth(
         function(data) {

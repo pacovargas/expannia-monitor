@@ -1,15 +1,22 @@
 {
-  "prepare_queue": {
-    "installed": [],
-    "uninstalled": []
-  },
-  "config_munge": {
-    "files": {}
-  },
-  "installed_plugins": {
-    "cordova-plugin-beacon": {
-      "PACKAGE_NAME": "com.phonegap.expanniamonitor"
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-beacon": {
+            "PACKAGE_NAME": "com.phonegap.expanniamonitor"
+        },
+        "cordova-plugin-background-mode": {
+            "PACKAGE_NAME": "com.phonegap.expanniamonitor"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.phonegap.expanniamonitor"
+        }
     }
-  },
-  "dependent_plugins": {}
 }
