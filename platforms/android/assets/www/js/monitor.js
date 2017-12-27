@@ -8,20 +8,10 @@ function lanzaMonitor(){
     display("device ready");
     cordova.plugins.simplexpbeacon.startMonitoring(
         function(data) {
-            display("dentro de la funcion");
+            var json = JSON.parse(data);
+            display(json.status);
         }
     );
 }
 
 document.addEventListener("deviceready", lanzaMonitor, false);
-
-// $(function(){
-//     console.log("probando funciones");
-//     display("Antes de las funciones");
-//     lanzaMonitor();
-//     cordova.plugins.simplexpbeacon.initialiseBluetooth(
-//         function(data) {
-//             display("dentro de la funcion");
-//         }
-//     );
-// });
