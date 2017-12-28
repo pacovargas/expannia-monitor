@@ -7,7 +7,7 @@ function display(str){
 }
 
 function updatePosition(lat, lng){
-    display("updatePosition: " + lat + ":" + lng);
+    // display("updatePosition: " + lat + ":" + lng);
     if(name != ""){
         $.ajax({
             url: 'http://geosearch.sauz.es/server/updatereceiverposition/',
