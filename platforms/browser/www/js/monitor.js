@@ -96,7 +96,9 @@ document.addEventListener("deviceready", lanzaMonitor, false);
 
 $(function(){
     $("#set-name").click(function(event) {
-        name = prompt("name");
+        var name_aux = prompt("name");
+        if(name_aux == null) name = "";
+        else name = name_aux;
         $("#name-field").html(name);
     });
 });

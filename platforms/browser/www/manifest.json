@@ -6,6 +6,12 @@
   "version": "com.phonegap.expanniamonitor",
   "description": "Expannia Beacons Monitoring APP",
   "author": "Sauz Web Solutions",
-  "icons": [],
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
   "start_url": "index.html"
 }

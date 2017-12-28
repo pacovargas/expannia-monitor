@@ -26,6 +26,7 @@
     <author email="paco@sauz.es" href="http://www.sauz.es">
         Sauz Web Solutions
     </author>
+    <icon src="icon.png" />
     <content src="index.html" />
     <access origin="*" />
     <preference name="loglevel" value="DEBUG" />
