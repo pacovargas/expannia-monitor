@@ -7,6 +7,7 @@ function display(str){
 }
 
 function updatePosition(lat, lng){
+    display("updatePosition: " + lat + ":" + lng);
     if(name != ""){
         $.ajax({
             url: 'http://geosearch.sauz.es/server/updatereceiverposition/',
@@ -57,7 +58,7 @@ function lanzaMonitor(){
 
     navigator.geolocation.watchPosition(
         function(position){
-            display("New position: " + position.coords.latitude + " - " + position.coords.longitude);
+            display("New position: " + position.coords.latitude + ":" + position.coords.longitude);
             updatePosition(position.coords.latitude, position.coords.longitude);
         }
     );
