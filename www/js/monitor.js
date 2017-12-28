@@ -29,7 +29,7 @@ function updatePosition(lat, lng){
     }
 }
 
-function updateVehicleLocation(qr_code, receiver_name){
+function updateVehicleLocation(qr_code, receiver_name, distance){
     $.ajax({
         url: 'http://geosearch.sauz.es/server/updatevehiclelocation/',
         type: 'POST',
@@ -37,6 +37,7 @@ function updateVehicleLocation(qr_code, receiver_name){
         data: {
             receiver_name: receiver_name,
             qr_code: qr_code,
+            distance: distance,
         },
     })
     .done(function(data) {
@@ -83,7 +84,7 @@ function lanzaMonitor(){
                 var distancia = parseInt(json.data["rssi"]) / parseInt(json.data["txpower"]);
                 display(cont + " - BEACON: " + json.data["uuid"] + "-" + json.data["major"] + "-" + json.data["minor"] + "(rssi: " + json.data["rssi"] + ") (Distiancia: " + distancia);
                 if(name != ""){
-                    updateVehicleLocation(json.data["uuid"] + "-" + json.data["major"] + "-" + json.data["minor"], name);
+                    updateVehicleLocation(json.data["uuid"] + "-" + json.data["major"] + "-" + json.data["minor"], name, distancia);
                 }
             }
         }
