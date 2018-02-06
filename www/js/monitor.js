@@ -10,7 +10,7 @@ function updatePosition(lat, lng){
     // display("updatePosition: " + lat + ":" + lng);
     if(name != ""){
         $.ajax({
-            url: 'http://geosearch.sauz.es/server/updatereceiverposition/',
+            url: 'http://gpsti.sauz.es/server/updatereceiverposition/',
             type: 'POST',
             dataType: 'json',
             data: {
@@ -32,7 +32,7 @@ function updatePosition(lat, lng){
 
 function updateVehicleLocation(qr_code, receiver_name, distance){
     $.ajax({
-        url: 'http://geosearch.sauz.es/server/updatevehiclelocation/',
+        url: 'http://gpsti.sauz.es/server/updatevehiclelocation/',
         type: 'POST',
         dataType: 'json',
         data: {

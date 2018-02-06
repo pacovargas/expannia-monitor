@@ -19,7 +19,7 @@
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
     </feature>
-    <name>Expannia Monitor</name>
+    <name>GPS-Ti Monitor</name>
     <description>
         Expannia Beacons Monitoring APP
     </description>

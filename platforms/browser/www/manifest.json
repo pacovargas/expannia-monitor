@@ -1,8 +1,8 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Expannia Monitor",
-  "short_name": "Expannia Monitor",
+  "name": "GPS-Ti Monitor",
+  "short_name": "GPS-Ti Monitor",
   "version": "com.phonegap.expanniamonitor",
   "description": "Expannia Beacons Monitoring APP",
   "author": "Sauz Web Solutions",
