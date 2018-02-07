@@ -98,10 +98,13 @@ function lanzaMonitor(){
 document.addEventListener("deviceready", lanzaMonitor, false);
 
 $(function(){
+    name = window.localStorage.getItem("name_em");
+
     $("#set-name").click(function(event) {
         var name_aux = prompt("name");
         if(name_aux == null) name = "";
         else name = name_aux;
         $("#name-field").html(name);
+        window.localStorage.setItem("name_em", name);
     });
 });
