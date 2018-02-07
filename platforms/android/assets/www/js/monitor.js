@@ -99,6 +99,7 @@ document.addEventListener("deviceready", lanzaMonitor, false);
 
 $(function(){
     name = window.localStorage.getItem("name_em");
+    $("#name-field").html(name);
 
     $("#set-name").click(function(event) {
         var name_aux = prompt("name");
