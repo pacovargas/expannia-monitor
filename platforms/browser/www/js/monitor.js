@@ -98,7 +98,12 @@ function lanzaMonitor(){
 document.addEventListener("deviceready", lanzaMonitor, false);
 
 $(function(){
-    name = window.localStorage.getItem("name_em");
+    if(window.localStorage.getItem("name_em") == null){
+        name = "";
+    }
+    else{
+        name = window.localStorage.getItem("name_em");
+    }
     $("#name-field").html(name);
 
     $("#set-name").click(function(event) {
