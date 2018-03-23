@@ -97,7 +97,16 @@ function lanzaMonitor(){
     
 }
 
-document.addEventListener("deviceready", lanzaMonitor, false);
+// document.addEventListener("deviceready", lanzaMonitor, false);
+onDeviceReady: function() {
+    lanzaMonitor();
+    document.addEventListener('pause', function(){display("en backgorund");}, false);
+
+    // document.addEventListener('resume', this.onResumeApp, false);
+    // document.addEventListener('online', this.onLineApp, false);
+    // document.addEventListener('offline', this.offLineApp, false);
+    // document.addEventListener('backbutton', this.onBackButton, false);
+}
 
 $(function(){
     if(window.localStorage.getItem("name_em") == null){
