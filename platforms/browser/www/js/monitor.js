@@ -98,15 +98,6 @@ function lanzaMonitor(){
 
 document.addEventListener("deviceready", lanzaMonitor, false);
 
-cordova.plugins.backgroundMode.onactivate = function() {
-    //La función
-    //Añadir un setTimeout(funcion, 10000); para hacer que la función se ejecute cada x segundos
-
-    setTimeout(function(){
-        display("en background");
-    }, 1);
-};
-
 $(function(){
     if(window.localStorage.getItem("name_em") == null){
         name = "";
