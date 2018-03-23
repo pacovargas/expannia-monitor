@@ -54,7 +54,7 @@ function updateVehicleLocation(qr_code, receiver_name, distance){
 function lanzaMonitor(){
     display("device ready");
 
-    // window.plugins.insomnia.keepAwake();
+    window.plugins.insomnia.keepAwake();
     // cordova.plugins.backgroundMode.enable();
     window.plugin.backgroundMode.enable();
 
@@ -97,16 +97,7 @@ function lanzaMonitor(){
     
 }
 
-// document.addEventListener("deviceready", lanzaMonitor, false);
-onDeviceReady: function() {
-    lanzaMonitor();
-    document.addEventListener('pause', function(){display("en backgorund");}, false);
-
-    // document.addEventListener('resume', this.onResumeApp, false);
-    // document.addEventListener('online', this.onLineApp, false);
-    // document.addEventListener('offline', this.offLineApp, false);
-    // document.addEventListener('backbutton', this.onBackButton, false);
-}
+document.addEventListener("deviceready", lanzaMonitor, false);
 
 $(function(){
     if(window.localStorage.getItem("name_em") == null){
