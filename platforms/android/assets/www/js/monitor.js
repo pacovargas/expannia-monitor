@@ -55,7 +55,8 @@ function lanzaMonitor(){
     display("device ready");
 
     // window.plugins.insomnia.keepAwake();
-    cordova.plugins.backgroundMode.enable();
+    // cordova.plugins.backgroundMode.enable();
+    window.plugin.backgroundMode.enable();
 
     navigator.geolocation.watchPosition(
         function(position){
