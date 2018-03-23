@@ -61,7 +61,6 @@ function lanzaMonitor(){
         setTimeout(function(){
             cordova.plugins.simplexpbeacon.startMonitoring(
                 function(data) {
-                    display("estamos en bg");
                     var json = JSON.parse(data);
                     // display("start status: " + json.status);
                     // display("start event: " + json.event);
