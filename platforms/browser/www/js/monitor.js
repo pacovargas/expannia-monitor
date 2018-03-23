@@ -54,7 +54,8 @@ function updateVehicleLocation(qr_code, receiver_name, distance){
 function lanzaMonitor(){
     display("device ready");
 
-    window.plugins.insomnia.keepAwake();
+    // window.plugins.insomnia.keepAwake();
+    cordova.plugins.backgroundMode.enable();
 
     navigator.geolocation.watchPosition(
         function(position){
