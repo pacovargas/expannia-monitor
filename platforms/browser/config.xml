@@ -10,4 +10,5 @@
     <icon src="icon.png" />
     <content src="index.html" />
     <access origin="*" />
+    <preference name="exit-on-suspend" value="false" />
 </widget>
