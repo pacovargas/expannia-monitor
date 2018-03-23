@@ -54,8 +54,6 @@ function updateVehicleLocation(qr_code, receiver_name, distance){
 function lanzaMonitor(){
     display("device ready");
 
-    document.addEventListener('pause', this.onPauseApp, false);
-
     // window.plugins.insomnia.keepAwake();
     cordova.plugins.backgroundMode.enable();
 
@@ -99,6 +97,7 @@ function lanzaMonitor(){
 }
 
 document.addEventListener("deviceready", lanzaMonitor, false);
+document.addEventListener('pause', this.onPauseApp, false);
 
 $(function(){
     if(window.localStorage.getItem("name_em") == null){
