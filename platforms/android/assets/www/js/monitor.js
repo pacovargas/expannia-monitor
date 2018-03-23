@@ -97,7 +97,6 @@ function lanzaMonitor(){
 }
 
 document.addEventListener("deviceready", lanzaMonitor, false);
-document.addEventListener('pause', this.onPauseApp, false);
 
 $(function(){
     if(window.localStorage.getItem("name_em") == null){
